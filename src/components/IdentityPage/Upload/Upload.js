@@ -9,7 +9,7 @@ class Upload extends Component {
             <div className="upload-container">
                 <label className="upload-label">
                     <div className="upload-title">
-                        <img src={file} />
+                        <img src={file} alt="file" />
                         <span>Drag photos here or click to upload</span>    
                     </div>
                     <input type="file" id="upload" />

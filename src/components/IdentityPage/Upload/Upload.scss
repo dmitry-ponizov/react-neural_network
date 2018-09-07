@@ -1,12 +1,13 @@
 .upload-container {
     display: flex;
+    margin-top: 50px;
     .upload-label {
         width: 450px;
         height: 200px;
         border-radius: 4px;
         background-color: rgba(18, 182, 208, 0.03);
         border: dashed 1px #12b6d0;
-
+        cursor: pointer;
         #upload {
              display: none;   
         }

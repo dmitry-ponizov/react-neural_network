@@ -1,0 +1,12 @@
+.btn {
+    width: 54px;
+    height: 54px;
+    box-shadow: 0 5px 10px 0 rgba(252, 180, 38, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn-orange {
+    background-color: #fcb426;
+}
