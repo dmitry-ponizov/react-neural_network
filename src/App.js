@@ -9,12 +9,14 @@ import UsersPage from './components/UsersPage/UsersPage'
 class App extends Component {
 
   state = {
-    show: true
+    show: false
   }
-
+ nextPageHandler = () => {
+   this.setState({show: true})
+ }
   render() {
 
-    let page = this.state.show ? <UsersPage />: <IdentityPage />
+    let page = this.state.show ? <UsersPage />: <IdentityPage next={this.nextPageHandler} />
     return (
       <div className="wrapper">
        <Header /> 
