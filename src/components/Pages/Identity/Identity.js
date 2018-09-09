@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './IdentityPage.css';
+import './Identity.css';
 import Attachment from './Attachment/Attachment'
-import Button from '../UI/Button/Button'
-import Title from '../UI/Title/Title';
+import Button from '../../UI/Button/Button'
+import Title from '../../UI/Title/Title';
 import ReactDropzone from 'react-dropzone';
-import fileImage from "../../assets/images/file.svg"
+import fileImage from "../../../assets/images/file.svg"
 import axios from 'axios';
 
 

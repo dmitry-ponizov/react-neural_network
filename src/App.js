@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header  from './components/Header/Header'
-import IdentityPage from './components/IdentityPage/IdentityPage';
-import UsersPage from './components/UsersPage/UsersPage'
+import Identity from './components/Pages/Identity/Identity';
+import Results from './components/Pages/Results/Results'
 
 
 
@@ -18,7 +18,7 @@ class App extends Component {
  }
   render() {
 
-    let page = this.state.show ? <UsersPage serf={this.serfPageHandler} />: <IdentityPage serf={this.serfPageHandler} />
+    let page = this.state.show ? <Results serf={this.serfPageHandler} />: <Identity serf={this.serfPageHandler} />
     return (
       <div className="wrapper">
        <Header /> 

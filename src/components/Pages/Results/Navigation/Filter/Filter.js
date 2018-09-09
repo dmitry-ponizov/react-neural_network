@@ -1,6 +1,6 @@
 import React from 'react'
 import './Filter.css';
-import filterImg from '../../../../assets/images/filter.svg'
+import filterImg from '../../../../../assets/images/filter.svg'
 
 const filter = (props) => (
     <div className="filter" >

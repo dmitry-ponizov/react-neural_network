@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Attachment.css'
-import close from '../../../assets/images/close.svg'
+import close from '../../../../assets/images/close.svg'
 
 class Attachment extends Component {
 

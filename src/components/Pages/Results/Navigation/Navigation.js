@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Title from '../../UI/Title/Title'
-import BackButton from '../../UI/BackButton/BackButton';
+import Title from '../../../UI/Title/Title'
+import BackButton from '../../../UI/BackButton/BackButton';
 import './Navigation.css';
 import Filter from './Filter/Filter'
 

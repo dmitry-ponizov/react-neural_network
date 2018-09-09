@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './UsersPage.css';
+import './Results.css';
 import Navigation from './Navigation/Navigation'
 import Profile from './Profile/Profile'
-import Title from '../UI/Title/Title'
-import UserPhoto from '../UI/UserPhoto/UserPhoto'
+import Title from '../../UI/Title/Title'
+import UserPhoto from '../../UI/UserPhoto/UserPhoto'
 
 class UsersPage extends Component {
     
