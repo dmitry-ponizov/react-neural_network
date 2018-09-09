@@ -31,9 +31,9 @@ class IdentityPage extends Component {
        
           
       }
-      nextPage = () => {
+      serfPage = (bool) => {
           if(this.state.files.length){
-            this.props.next()
+            this.props.serf(bool)
             this.fileUploadHandler()
           } else {
               return
@@ -86,7 +86,7 @@ class IdentityPage extends Component {
             <div className="identity-container">
                 <Title name={this.state.name} />
                 <ReactDropzone
-                    accept="image/*"
+                    accept = "image/jpeg,image/jpg"
                     onDrop={this.onPreviewDrop}
                     className="upload-container"
                     >
@@ -102,7 +102,7 @@ class IdentityPage extends Component {
                     </div>
                  </div>
                 <div className="btn-container">
-                    <Button nextPage={this.nextPage} />
+                    <Button serfPage={this.serfPage} />
                 </div>
             </div>
         )

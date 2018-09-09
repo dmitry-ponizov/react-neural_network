@@ -4,9 +4,7 @@ import arrow from '../../../assets/images/arrow.svg'
 
 const button = (props) => (
   <div
-     onClick = {
-       props.nextPage
-     }
+     onClick = {() => props.serfPage(true)}
      className="btn btn-orange">
      <img src={ arrow } alt="arrow" />
    </div>

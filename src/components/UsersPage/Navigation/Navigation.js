@@ -16,7 +16,7 @@ class Navigation extends Component {
     render() {
         return (
             <div className="navigation">
-                <BackButton title={titles.backBtnTitle} />
+                <BackButton title={titles.backBtnTitle} serfPage={this.props.serfPage}/>
                 <Title name={titles.firstTitle} />
                 <Filter />
             </div>

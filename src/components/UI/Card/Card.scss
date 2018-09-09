@@ -1,0 +1,127 @@
+.card {
+    display: flex;
+    margin-left: 30px;
+    width: 212px;
+    height: 131px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #00c1de;
+    border-radius: 2px;
+    padding: 7px 3px 7px 8px;
+
+    .left-block {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+
+        .image {
+            width: 52px;
+            height: 52px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .qr {
+            height: 30px;
+            width: 30px;
+            margin-top: 17px;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .center-block {
+        margin-left: 10px;
+
+        .card-logo {
+            display: flex;
+
+            img {
+                height: 29px;
+                width: 48px;
+            }
+        }
+        .company {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+            line-height: 8px;
+            align-self: center;
+            .company-name {
+                font-family: Poppins-light;
+                color: #838c92;
+                font-size: 10px;
+                letter-spacing: 7px;
+            }
+
+            .company-description {
+                font-family: Poppins-light;
+                color: #838c92;
+                font-size: 5.5px;
+                font-weight: normal;
+            }
+        }
+        .user-data{
+            margin-top: 10px;
+            color: #838c92;
+            font-family: Poppins-extra-light;
+            .fields {
+                display: flex;
+                margin-top: 2px;
+            }
+            ul{
+                list-style-type: none;
+                   li {
+                       color: #838c92;
+                       font-size: 6px;
+                    
+                   }
+            }
+        
+           .fields-values{
+               margin-left: 5px;
+               :last-child{
+                   font-size: 5px;
+               }
+           }
+            .name {
+                font-family:Poppins-medium;
+                font-size: 8px;
+            }
+        }
+        .verified {
+                 margin-top: 9px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            .title {
+                 font-family:Poppins-medium;
+                 font-size: 6px;
+                 color: #838c92;
+            }
+            ul {
+                display: flex;
+                 list-style-type: none;
+                 li {
+                     width: 13px;
+                     height: 13px;
+                     img{
+                         height: 100%;
+                     }
+                 }
+            }
+        }
+    }
+    .right-block {
+        width: 4px;
+        height: 100px;
+        img{
+            height: 100%;
+        }
+    }
+}

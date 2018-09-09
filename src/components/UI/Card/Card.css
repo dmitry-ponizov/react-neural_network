@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  margin-left: 30px;
+  width: 212px;
+  height: 131px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #00c1de;
+  border-radius: 2px;
+  padding: 7px 3px 7px 8px; }
+  .card .left-block {
+    flex-direction: column;
+    display: flex;
+    align-items: center; }
+    .card .left-block .image {
+      width: 52px;
+      height: 52px;
+      border: 1px solid transparent;
+      border-radius: 3px; }
+      .card .left-block .image img {
+        height: 100%; }
+    .card .left-block .qr {
+      height: 30px;
+      width: 30px;
+      margin-top: 17px; }
+      .card .left-block .qr img {
+        height: 100%; }
+  .card .center-block {
+    margin-left: 10px; }
+    .card .center-block .card-logo {
+      display: flex; }
+      .card .center-block .card-logo img {
+        height: 29px;
+        width: 48px; }
+    .card .center-block .company {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+      line-height: 8px;
+      align-self: center; }
+      .card .center-block .company .company-name {
+        font-family: Poppins-light;
+        color: #838c92;
+        font-size: 10px;
+        letter-spacing: 7px; }
+      .card .center-block .company .company-description {
+        font-family: Poppins-light;
+        color: #838c92;
+        font-size: 5.5px;
+        font-weight: normal; }
+    .card .center-block .user-data {
+      margin-top: 10px;
+      color: #838c92;
+      font-family: Poppins-extra-light; }
+      .card .center-block .user-data .fields {
+        display: flex;
+        margin-top: 2px; }
+      .card .center-block .user-data ul {
+        list-style-type: none; }
+        .card .center-block .user-data ul li {
+          color: #838c92;
+          font-size: 6px; }
+      .card .center-block .user-data .fields-values {
+        margin-left: 5px; }
+        .card .center-block .user-data .fields-values :last-child {
+          font-size: 5px; }
+      .card .center-block .user-data .name {
+        font-family: Poppins-medium;
+        font-size: 8px; }
+    .card .center-block .verified {
+      margin-top: 9px;
+      display: flex;
+      flex-direction: column;
+      align-items: start; }
+      .card .center-block .verified .title {
+        font-family: Poppins-medium;
+        font-size: 6px;
+        color: #838c92; }
+      .card .center-block .verified ul {
+        display: flex;
+        list-style-type: none; }
+        .card .center-block .verified ul li {
+          width: 13px;
+          height: 13px; }
+          .card .center-block .verified ul li img {
+            height: 100%; }
+  .card .right-block {
+    width: 4px;
+    height: 100px; }
+    .card .right-block img {
+      height: 100%; }

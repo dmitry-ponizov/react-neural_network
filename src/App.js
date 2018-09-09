@@ -9,14 +9,16 @@ import UsersPage from './components/UsersPage/UsersPage'
 class App extends Component {
 
   state = {
-    show: false
+    show: true
   }
- nextPageHandler = () => {
-   this.setState({show: true})
+ serfPageHandler = (bool) => {
+   this.setState({
+     show: bool
+   })
  }
   render() {
 
-    let page = this.state.show ? <UsersPage />: <IdentityPage next={this.nextPageHandler} />
+    let page = this.state.show ? <UsersPage serf={this.serfPageHandler} />: <IdentityPage serf={this.serfPageHandler} />
     return (
       <div className="wrapper">
        <Header /> 
