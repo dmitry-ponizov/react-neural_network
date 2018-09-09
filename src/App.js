@@ -9,7 +9,7 @@ import Results from './components/Pages/Results/Results'
 class App extends Component {
 
   state = {
-    show: true
+    show: false
   }
  serfPageHandler = (bool) => {
    this.setState({
