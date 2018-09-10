@@ -51,13 +51,20 @@ class IdentityPage extends Component {
               let fd = new FormData();
 
               for (var i = 0; i < count; i++) {
-                  fd.append("file[]", this.state.files[i]);
+                  fd.append("files[]", this.state.files[i]);
               }
 
             //   for (var value of fd.values()) {
             //       console.log(value);
             //   }
-              axios.post('/endpoint', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(res => {
+            
+            //   axios.post('http://hwl.api/test', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(res => {
+            //         console.log(res)
+            //   })
+
+            let arr = [1,2,3,4,5,6,7];
+            let newArr = JSON.stringify(arr)
+                axios.post('http://hwl.api/test', newArr, {headers: { 'Content-Type': 'application/json' }}).then(res => {
                     console.log(res)
               })
           }
@@ -100,7 +107,7 @@ class IdentityPage extends Component {
                     </div>
                  </div>
                  <div className={classes.btnContainer}>
-                          <Button serfPage={this.serfPage} />
+                    <Button serfPage={this.serfPage} active={this.state.files.length} />
                  </div>
             </div>
         )

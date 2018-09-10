@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import classes from './Attachment.css'
 import close from '../../../../assets/images/close.svg'
+import WOW  from "wowjs";
+
 
 class Attachment extends Component {
+
+
+    componentDidMount() {
+        new WOW.WOW({
+            live: false
+        }).init();
+    }
 
     short = () => {
         let value = this.props.name
@@ -18,9 +27,9 @@ class Attachment extends Component {
         return value;
     }
     render() {
-    
+        let animate = 'wow bounceIn';
         return (
-            <div className={classes.attachment}>
+            <div className={classes.attachment + ' ' + animate}>
                 <div>
                     <span className={classes.photoName}>{this.short()}</span>
                     <div onClick={() => this.props.closeHandler(this.props.name)}>

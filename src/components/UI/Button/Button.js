@@ -5,7 +5,7 @@ import arrow from '../../../assets/images/arrow.svg'
 const button = (props) => (
   <div
      onClick = {() => props.serfPage('results')}
-     className={classes.btn + ' ' +classes.btnOrange}>
+     className={ props.active > 0 ? classes.btnOrange +  ' ' + classes.btn  : classes.btnGrey  +  ' ' + classes.btn }>
      <img src={ arrow } alt="arrow" />
    </div>
 );
