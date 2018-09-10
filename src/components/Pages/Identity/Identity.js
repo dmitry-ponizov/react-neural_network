@@ -31,9 +31,9 @@ class IdentityPage extends Component {
        
           
       }
-      serfPage = (bool) => {
+      serfPage = (page) => {
           if(this.state.files.length){
-            this.props.serf(bool)
+            this.props.serf(page)
             this.fileUploadHandler()
           } else {
               return
@@ -82,6 +82,16 @@ class IdentityPage extends Component {
                 }
                 />
             })
+            let button = '';
+            if(this.state.files.length){
+                button = <div className="btn-container">
+                          <Button serfPage={this.serfPage} />
+                        </div>
+            } else {
+                button = <div className="btn-container">
+                          <Button serfPage={this.serfPage} />
+                        </div>
+            }
         return (
             <div className="identity-container">
                 <Title name={this.state.name} />
@@ -89,7 +99,7 @@ class IdentityPage extends Component {
                     accept = "image/jpeg,image/jpg"
                     onDrop={this.onPreviewDrop}
                     className="upload-container"
-                    >
+                    >   
                        <div className="upload-title">
                         <img src={fileImage} alt="file"  />
                         <span>Drag photos here or click to upload</span>    
@@ -101,9 +111,7 @@ class IdentityPage extends Component {
                        {files}
                     </div>
                  </div>
-                <div className="btn-container">
-                    <Button serfPage={this.serfPage} />
-                </div>
+                {button}
             </div>
         )
     }
