@@ -29,7 +29,7 @@ class UsersPage extends Component {
                         <UserPhoto />
                     </div>
                 </div>
-            
+                
             </div>
         )
     }

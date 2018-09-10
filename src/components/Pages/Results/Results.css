@@ -1,6 +1,5 @@
 .users {
   width: 1200px;
-  height: 750px;
   border-radius: 6px;
   background-color: #ffffff;
   border: solid 1px #e5e5e5;
@@ -10,7 +9,8 @@
     flex-wrap: wrap;
     justify-content: space-between; }
   .users .without {
-    margin-top: 60px; }
+    margin-top: 60px;
+    margin-bottom: 50px; }
     .users .without .without-users {
       justify-content: center;
       display: flex;

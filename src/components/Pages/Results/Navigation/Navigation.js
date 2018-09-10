@@ -18,7 +18,7 @@ class Navigation extends Component {
             <div className="navigation">
                 <BackButton title={titles.backBtnTitle} serfPage={this.props.serfPage}/>
                 <Title name={titles.firstTitle} />
-                <Filter />
+                <Filter serfPage={this.props.serfPage} />
             </div>
         )
     }

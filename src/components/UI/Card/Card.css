@@ -27,26 +27,10 @@
   .card .center-block {
     margin-left: 10px; }
     .card .center-block .card-logo {
-      display: flex; }
-      .card .center-block .card-logo img {
-        height: 29px;
-        width: 48px; }
-    .card .center-block .company {
       display: flex;
-      flex-direction: column;
-      margin-left: 5px;
-      line-height: 8px;
-      align-self: center; }
-      .card .center-block .company .company-name {
-        font-family: Poppins-light;
-        color: #838c92;
-        font-size: 10px;
-        letter-spacing: 7px; }
-      .card .center-block .company .company-description {
-        font-family: Poppins-light;
-        color: #838c92;
-        font-size: 5.5px;
-        font-weight: normal; }
+      height: 28px; }
+      .card .center-block .card-logo img {
+        height: 100%; }
     .card .center-block .user-data {
       margin-top: 10px;
       color: #838c92;

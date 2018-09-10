@@ -3,26 +3,42 @@ import './App.css';
 import Header  from './components/Header/Header'
 import Identity from './components/Pages/Identity/Identity';
 import Results from './components/Pages/Results/Results'
-
+import Filter from './components/Pages/Filter/Filter'
+import { Route, Link } from 'react-router-dom';
 
 
 class App extends Component {
 
   state = {
-    show: false
+    page: 'indentity'
   }
- serfPageHandler = (bool) => {
+ serfPageHandler = (pageName) => {
    this.setState({
-     show: bool
+    page: pageName
    })
  }
   render() {
+    let page = '';
+    switch(this.state.page) {
+      case 'results': 
+      page = <Results serf={this.serfPageHandler} />
+        break;
+      case 'filter': 
+        page = <Filter />
+        break;
+      default:
+        page = <Identity serf={this.serfPageHandler} />
+        break;
+    }
 
-    let page = this.state.show ? <Results serf={this.serfPageHandler} />: <Identity serf={this.serfPageHandler} />
     return (
       <div className="wrapper">
-       <Header /> 
+        <Header /> 
        { page }
+       
+
+        {/* <Route path="/" exact component={Identity}/>
+        <Route path="/results" component={Results}/> */}
       </div>
     );
   }

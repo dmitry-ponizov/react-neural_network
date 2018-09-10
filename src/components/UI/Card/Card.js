@@ -1,16 +1,16 @@
 import React from 'react';
 import './Card.css';
 import avatar from '../../../assets/images/man.jpg'
-import qrCode from '../../../assets/images/qrcode.jpg'
-import logo from '../../../assets/images/logo2.png'
-import barСode from '../../../assets/images/code.jpg'
-import icon1 from '../../../assets/images/icons/icon1.png'
-import icon2 from '../../../assets/images/icons/icon2.png'
-import icon3 from '../../../assets/images/icons/icon3.png'
-import icon4 from '../../../assets/images/icons/icon4.png'
-import icon5 from '../../../assets/images/icons/icon5.png'
-import icon6 from '../../../assets/images/icons/icon6.png'
-import icon7 from '../../../assets/images/icons/icon7.png'
+import qrCode from '../../../assets/images/qrcode.png'
+import logo from '../../../assets/images/logo-card.svg'
+import barСode from '../../../assets/images/code.svg'
+import icon1 from '../../../assets/images/icons/1.png'
+import icon2 from '../../../assets/images/icons/2.png'
+import icon3 from '../../../assets/images/icons/3.png'
+import icon4 from '../../../assets/images/icons/4.svg'
+import icon5 from '../../../assets/images/icons/5.png'
+import icon6 from '../../../assets/images/icons/6.svg'
+import icon7 from '../../../assets/images/icons/7.svg'
 
 const card = () => (
     <div className="card" >
@@ -25,10 +25,6 @@ const card = () => (
         <div className="center-block" >
             <div className="card-logo" >
                 <img src={logo}  alt="monic logotip" />
-                 <div className="company">
-                    <div className="company-name">MONIIC</div>
-                    <span className="company-description">International identity card</span>
-                </div> 
             </div>
             <div className="user-data">
                 <div className="name" >John Doe</div>
