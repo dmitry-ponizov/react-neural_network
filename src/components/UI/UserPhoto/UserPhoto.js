@@ -1,11 +1,11 @@
 import React from 'react'
 import people from '../../../assets/images/bitmap.jpg'
-import './UserPhoto.css'
+import classes from './UserPhoto.css'
 
 const userPhoto = (props) => (
-        <div className="user-photo">
-            <div className="image-container" >
-                <div className="img" >
+        <div className={classes.userPhoto}>
+            <div className={classes.imageContainer} >
+                <div className={classes.img}>
                     <img src={people} alt="" />
                 </div>
             </div>

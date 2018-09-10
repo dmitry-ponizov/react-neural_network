@@ -1,4 +1,4 @@
-.identity-container {
+.identityContainer {
     width: 550px;
     border-radius: 6px;
     background-color: #ffffff;
@@ -8,13 +8,13 @@
     align-items: center;
     padding: 40px 50px;
 
-    .btn-container {
+    .btnContainer {
         margin-top: 88px;
         padding-bottom: 40px;
     }
 }
 
-.attachment-list {
+.attachmentList {
     width: 450px;
     padding: 15px 0;
     font-family: Poppins-regular;
@@ -32,7 +32,7 @@
     }
 }
 
-.upload-container {
+.uploadContainer {
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -50,7 +50,7 @@
         display: none;
     }
 
-    .upload-title {
+    .uploadTitle {
         display: flex;
         justify-content: center;
         flex-direction: column;

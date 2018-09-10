@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 import Header  from './components/Header/Header'
 import Identity from './components/Pages/Identity/Identity';
 import Results from './components/Pages/Results/Results'
@@ -10,7 +10,7 @@ import Filter from './components/Pages/Filter/Filter'
 class App extends Component {
 
   state = {
-    page: 'indentity'
+    page: 'identity'
   }
  serfPageHandler = (pageName) => {
    this.setState({
@@ -32,7 +32,7 @@ class App extends Component {
     }
 
     return (
-      <div className="wrapper">
+      <div className={classes.wrapper}>
         <Header /> 
        { page }
       </div>

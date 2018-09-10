@@ -8,7 +8,7 @@
     border-radius: 2px;
     padding: 7px 3px 7px 8px;
 
-    .left-block {
+    .leftBlock {
         flex-direction: column;
         display: flex;
         align-items: center;
@@ -35,10 +35,10 @@
         }
     }
 
-    .center-block {
+    .centerBlock {
         margin-left: 10px;
 
-        .card-logo {
+        .cardLogo {
             display: flex;
             height: 28px;
             img {
@@ -46,7 +46,7 @@
             }
         }
 
-        .user-data{
+        .userData{
             margin-top: 10px;
             color: #838c92;
             font-family: Poppins-extra-light;
@@ -63,7 +63,7 @@
                    }
             }
         
-           .fields-values{
+           .fieldsValues{
                margin-left: 5px;
                :last-child{
                    font-size: 5px;
@@ -97,7 +97,7 @@
             }
         }
     }
-    .right-block {
+    .rightBlock {
         width: 4px;
         height: 100px;
         img{

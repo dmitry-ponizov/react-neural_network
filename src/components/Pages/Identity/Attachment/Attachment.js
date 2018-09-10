@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Attachment.css'
+import classes from './Attachment.css'
 import close from '../../../../assets/images/close.svg'
 
 class Attachment extends Component {
@@ -20,14 +20,14 @@ class Attachment extends Component {
     render() {
     
         return (
-            <div className="attachment">
+            <div className={classes.attachment}>
                 <div>
-                    <span className="photo-name">{this.short()}</span>
+                    <span className={classes.photoName}>{this.short()}</span>
                     <div onClick={() => this.props.closeHandler(this.props.name)}>
                         <img src={close} alt="close" />
                     </div>
                 </div>
-                <span className="photo-size">{this.props.size}KB</span>
+                <span className={classes.photoSize}>{this.props.size}KB</span>
             </div>
         )
     }

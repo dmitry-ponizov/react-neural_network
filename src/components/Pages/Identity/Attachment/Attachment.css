@@ -18,14 +18,14 @@
     color: #000000;
     display: flex;
     justify-content: space-between; }
-    .attachment div .photo-name {
+    .attachment div .photoName {
       margin-right: 5px; }
     .attachment div div {
       display: flex;
       justify-content: flex-end;
       height: 10px;
       cursor: pointer; }
-  .attachment .photo-size {
+  .attachment .photoSize {
     opacity: 0.5;
     font-family: Poppins-regular;
     font-size: 7px;

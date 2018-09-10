@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Identity.css';
+import classes from './Identity.css';
 import Attachment from './Attachment/Attachment'
 import Button from '../../UI/Button/Button'
 import Title from '../../UI/Title/Title';
@@ -47,21 +47,18 @@ class IdentityPage extends Component {
         }
           fileUploadHandler = () => {
               let count = Object.keys(this.state.files).length;
+
               let fd = new FormData();
 
               for (var i = 0; i < count; i++) {
-                  fd.append("files[]", this.state.files[i]);
+                  fd.append("file[]", this.state.files[i]);
               }
 
             //   for (var value of fd.values()) {
             //       console.log(value);
             //   }
-              axios.post('/endpoint', fd, {
-                  onUploadProgress: progressEvent => {
-                      console.log('Upload progress : ' + Math.round(progressEvent.loaded / progressEvent.total * 100) + '%')
-                  }
-              }).then(res => {
-
+              axios.post('/endpoint', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(res => {
+                    console.log(res)
               })
           }
     render() {
@@ -82,36 +79,29 @@ class IdentityPage extends Component {
                 }
                 />
             })
-            let button = '';
-            if(this.state.files.length){
-                button = <div className="btn-container">
-                          <Button serfPage={this.serfPage} />
-                        </div>
-            } else {
-                button = <div className="btn-container">
-                          <Button serfPage={this.serfPage} />
-                        </div>
-            }
+          
         return (
-            <div className="identity-container">
+            <div className={classes.identityContainer}>
                 <Title name={this.state.name} />
                 <ReactDropzone
                     accept = "image/jpeg,image/jpg"
                     onDrop={this.onPreviewDrop}
-                    className="upload-container"
+                    className={classes.uploadContainer}
                     >   
-                       <div className="upload-title">
+                       <div className={classes.uploadTitle}>
                         <img src={fileImage} alt="file"  />
                         <span>Drag photos here or click to upload</span>    
                     </div>
                 </ReactDropzone>
-                 <div className="attachment-list">
+                 <div className={classes.attachmentList}>
                     <div>Attachments</div>
-                    <div className="attachments">
+                    <div className={classes.attachments}>
                        {files}
                     </div>
                  </div>
-                {button}
+                 <div className={classes.btnContainer}>
+                          <Button serfPage={this.serfPage} />
+                 </div>
             </div>
         )
     }

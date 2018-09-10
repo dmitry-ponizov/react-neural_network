@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Results.css';
+import classes from './Results.css';
 import Navigation from './Navigation/Navigation'
 import Profile from './Profile/Profile'
 import Title from '../../UI/Title/Title'
@@ -10,9 +10,9 @@ class UsersPage extends Component {
 
     render() {
         return (
-            <div className="users">
+            <div className={classes.users}>
                 <Navigation serfPage={this.props.serf} />
-                <div className="profiles">
+                <div className={classes.profiles}>
                     <Profile / >
                     <Profile / >
                     <Profile / >
@@ -20,9 +20,9 @@ class UsersPage extends Component {
                     <Profile / >
                     <Profile / >
                 </div>
-                <div className="without">
+                <div className={classes.without}>
                     <Title name ="People without Moniic account" />
-                    <div className="without-users">
+                    <div className={classes.withoutUsers}>
                         <UserPhoto />
                         <UserPhoto />
                         <UserPhoto />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Title from '../../../UI/Title/Title'
 import BackButton from '../../../UI/BackButton/BackButton';
-import './Navigation.css';
+import classes from './Navigation.css';
 import Filter from './Filter/Filter'
 
 const titles = {
@@ -15,7 +15,7 @@ class Navigation extends Component {
 
     render() {
         return (
-            <div className="navigation">
+            <div className={classes.navigation}>
                 <BackButton title={titles.backBtnTitle} serfPage={this.props.serfPage}/>
                 <Title name={titles.firstTitle} />
                 <Filter serfPage={this.props.serfPage} />

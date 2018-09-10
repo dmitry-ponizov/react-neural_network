@@ -1,11 +1,11 @@
 import React from 'react';
-import './Button.css';
+import classes from './Button.css';
 import arrow from '../../../assets/images/arrow.svg'
 
 const button = (props) => (
   <div
      onClick = {() => props.serfPage('results')}
-     className="btn btn-orange">
+     className={classes.btn + ' ' +classes.btnOrange}>
      <img src={ arrow } alt="arrow" />
    </div>
 );

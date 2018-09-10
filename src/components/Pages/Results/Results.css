@@ -11,11 +11,11 @@
   .users .without {
     margin-top: 60px;
     margin-bottom: 50px; }
-    .users .without .without-users {
+    .users .without .withoutUsers {
       justify-content: center;
       display: flex;
       margin-top: 45px; }
-      .users .without .without-users .user-photo {
+      .users .without .withoutUsers div {
         margin-right: 40px; }
-        .users .without .without-users .user-photo:last-child {
+        .users .without .withoutUsers div:last-child {
           margin-right: 0; }

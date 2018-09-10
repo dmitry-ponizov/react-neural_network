@@ -13,11 +13,11 @@
     .without {  
         margin-top: 60px;
         margin-bottom: 50px;
-        .without-users{
+        .withoutUsers{
             justify-content: center;
             display: flex;  
             margin-top: 45px;
-            .user-photo {
+            div {
                 margin-right: 40px;
                 &:last-child {
                     margin-right: 0;

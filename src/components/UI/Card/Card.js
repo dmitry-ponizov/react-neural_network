@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import classes from './Card.css';
 import avatar from '../../../assets/images/man.jpg'
 import qrCode from '../../../assets/images/qrcode.png'
 import logo from '../../../assets/images/logo-card.svg'
@@ -13,39 +13,39 @@ import icon6 from '../../../assets/images/icons/6.svg'
 import icon7 from '../../../assets/images/icons/7.svg'
 
 const card = () => (
-    <div className="card" >
-        <div className="left-block" >
-            <div className="image">
+    <div className={classes.card} >
+        <div className={classes.leftBlock} >
+            <div className={classes.image}>
                 <img src={ avatar } alt="avatar" />
             </div>
-            <div className="qr">
+            <div className={classes.qr}>
                 <img src={qrCode}  alt="code" />
             </div>
         </div>
-        <div className="center-block" >
-            <div className="card-logo" >
+        <div className={classes.centerBlock} >
+            <div className={classes.cardLogo} >
                 <img src={logo}  alt="monic logotip" />
             </div>
-            <div className="user-data">
-                <div className="name" >John Doe</div>
-                <div className="fields">
-                    <ul className="user-fields">
+            <div className={classes.userData}>
+                <div className={classes.name} >John Doe</div>
+                <div className={classes.fields}>
+                    <ul className={classes.userFields}>
                         <li>Nationality:</li>
                         <li>Expiration:</li>
                         <li>ID:</li>
                     </ul>
-                    <ul className="fields-values">
+                    <ul className={classes.fieldsValues}>
                         <li>USA</li>
                         <li>2022-10-04</li>
                         <li>28135456-3c11-4d6c-bebb-51ee22ce</li>
                      </ul>
                 </div>
             </div>
-            <div className="verified">
-                <div className="title">
+            <div className={classes.verified}>
+                <div className={classes.title}>
                     Verified accounts
                 </div>
-                <ul className="icons">
+                <ul className={classes.icons}>
                     <li><img src={icon1} alt="" /></li>
                     <li><img src={icon2} alt="" /></li>
                     <li><img src={icon3} alt="" /></li>
@@ -56,7 +56,7 @@ const card = () => (
                 </ul>
             </div>
         </div>
-        <div className="right-block">
+        <div className={classes.rightBlock}>
             <img src={barСode} alt="barcode" />
         </div>
     </div>
