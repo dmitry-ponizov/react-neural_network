@@ -1,7 +1,7 @@
-.logo {
+.Logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 45px 0; }
-  .logo img {
+  .Logo img {
     height: 100%; }

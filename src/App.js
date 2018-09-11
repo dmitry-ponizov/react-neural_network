@@ -32,7 +32,7 @@ class App extends Component {
     }
 
     return (
-      <div className={classes.wrapper}>
+      <div className={classes.Wrapper}>
         <Header /> 
        { page }
       </div>

@@ -1,4 +1,4 @@
-.card {
+.Card {
     display: flex;
     margin-left: 30px;
     width: 212px;
@@ -8,12 +8,12 @@
     border-radius: 2px;
     padding: 7px 3px 7px 8px;
 
-    .leftBlock {
+    .LeftBlock {
         flex-direction: column;
         display: flex;
         align-items: center;
 
-        .image {
+        .Image {
             width: 52px;
             height: 52px;
             border: 1px solid transparent;
@@ -24,7 +24,7 @@
             }
         }
 
-        .qr {
+        .Qr {
             height: 30px;
             width: 30px;
             margin-top: 17px;
@@ -35,10 +35,10 @@
         }
     }
 
-    .centerBlock {
+    .CenterBlock {
         margin-left: 10px;
 
-        .cardLogo {
+        .CardLogo {
             display: flex;
             height: 28px;
             img {
@@ -46,11 +46,11 @@
             }
         }
 
-        .userData{
+        .UserData{
             margin-top: 10px;
             color: #838c92;
             font-family: Poppins-extra-light;
-            .fields {
+            .Fields {
                 display: flex;
                 margin-top: 2px;
             }
@@ -63,23 +63,23 @@
                    }
             }
         
-           .fieldsValues{
+           .FieldsValues{
                margin-left: 5px;
                :last-child{
                    font-size: 5px;
                }
            }
-            .name {
+            .Name {
                 font-family:Poppins-medium;
                 font-size: 8px;
             }
         }
-        .verified {
+        .Verified {
                  margin-top: 9px;
                 display: flex;
                 flex-direction: column;
                 align-items: start;
-            .title {
+            .Title {
                  font-family:Poppins-medium;
                  font-size: 6px;
                  color: #838c92;
@@ -97,7 +97,7 @@
             }
         }
     }
-    .rightBlock {
+    .RightBlock {
         width: 4px;
         height: 100px;
         img{

@@ -15,6 +15,8 @@ class IdentityPage extends Component {
         files: [],
     }
 
+
+
       closeAttachmentHandler = (name) => {
        let files = [...this.state.files];
 
@@ -88,25 +90,25 @@ class IdentityPage extends Component {
             })
           
         return (
-            <div className={classes.identityContainer}>
+            <div className={classes.IdentityContainer}>
                 <Title name={this.state.name} />
                 <ReactDropzone
                     accept = "image/jpeg,image/jpg"
                     onDrop={this.onPreviewDrop}
-                    className={classes.uploadContainer}
+                    className={classes.UploadContainer}
                     >   
-                       <div className={classes.uploadTitle}>
+                       <div className={classes.UploadTitle}>
                         <img src={fileImage} alt="file"  />
                         <span>Drag photos here or click to upload</span>    
                     </div>
                 </ReactDropzone>
-                 <div className={classes.attachmentList}>
+                 <div className={classes.AttachmentList}>
                     <div>Attachments</div>
-                    <div className={classes.attachments}>
+                    <div className={classes.Attachments}>
                        {files}
                     </div>
                  </div>
-                 <div className={classes.btnContainer}>
+                 <div className={classes.BtnContainer}>
                     <Button serfPage={this.serfPage} active={this.state.files.length} />
                  </div>
             </div>

@@ -1,21 +1,21 @@
-.users {
+.Users {
   width: 1200px;
   border-radius: 6px;
   background-color: #ffffff;
   border: solid 1px #e5e5e5;
   padding: 40px 70px 50px 70px; }
-  .users .profiles {
+  .Users .Profiles {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-  .users .without {
+  .Users .Without {
     margin-top: 60px;
     margin-bottom: 50px; }
-    .users .without .withoutUsers {
+    .Users .Without .WithoutUsers {
       justify-content: center;
       display: flex;
       margin-top: 45px; }
-      .users .without .withoutUsers div {
+      .Users .Without .WithoutUsers div {
         margin-right: 40px; }
-        .users .without .withoutUsers div:last-child {
+        .Users .Without .WithoutUsers div:last-child {
           margin-right: 0; }

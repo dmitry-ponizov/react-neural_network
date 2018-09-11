@@ -4,7 +4,7 @@ import UserPhoto from '../../../UI/UserPhoto/UserPhoto'
 import Card from '../../../UI/Card/Card'
 
 const card = (props) => (
-    <div className={classes.profile} >
+    <div className={classes.Profile} >
       <UserPhoto />
       <Card />
     </div>

@@ -12,6 +12,7 @@ class Attachment extends Component {
             live: false
         }).init();
     }
+    
 
     short = () => {
         let value = this.props.name
@@ -29,14 +30,14 @@ class Attachment extends Component {
     render() {
         let animate = 'wow bounceIn';
         return (
-            <div className={classes.attachment + ' ' + animate}>
+            <div className={classes.Attachment + ' ' + animate}>
                 <div>
-                    <span className={classes.photoName}>{this.short()}</span>
+                    <span className={classes.PhotoName}>{this.short()}</span>
                     <div onClick={() => this.props.closeHandler(this.props.name)}>
                         <img src={close} alt="close" />
                     </div>
                 </div>
-                <span className={classes.photoSize}>{this.props.size}KB</span>
+                <span className={classes.PhotoSize}>{this.props.size}KB</span>
             </div>
         )
     }

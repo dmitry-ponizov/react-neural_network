@@ -13,39 +13,39 @@ import icon6 from '../../../assets/images/icons/6.svg'
 import icon7 from '../../../assets/images/icons/7.svg'
 
 const card = () => (
-    <div className={classes.card} >
-        <div className={classes.leftBlock} >
-            <div className={classes.image}>
+    <div className={classes.Card} >
+        <div className={classes.LeftBlock} >
+            <div className={classes.Image}>
                 <img src={ avatar } alt="avatar" />
             </div>
-            <div className={classes.qr}>
+            <div className={classes.Qr}>
                 <img src={qrCode}  alt="code" />
             </div>
         </div>
-        <div className={classes.centerBlock} >
+        <div className={classes.CenterBlock} >
             <div className={classes.cardLogo} >
                 <img src={logo}  alt="monic logotip" />
             </div>
-            <div className={classes.userData}>
-                <div className={classes.name} >John Doe</div>
-                <div className={classes.fields}>
-                    <ul className={classes.userFields}>
+            <div className={classes.UserData}>
+                <div className={classes.Name} >John Doe</div>
+                <div className={classes.Fields}>
+                    <ul className={classes.UserFields}>
                         <li>Nationality:</li>
                         <li>Expiration:</li>
                         <li>ID:</li>
                     </ul>
-                    <ul className={classes.fieldsValues}>
+                    <ul className={classes.FieldsValues}>
                         <li>USA</li>
                         <li>2022-10-04</li>
                         <li>28135456-3c11-4d6c-bebb-51ee22ce</li>
                      </ul>
                 </div>
             </div>
-            <div className={classes.verified}>
-                <div className={classes.title}>
+            <div className={classes.Verified}>
+                <div className={classes.Title}>
                     Verified accounts
                 </div>
-                <ul className={classes.icons}>
+                <ul className={classes.Icons}>
                     <li><img src={icon1} alt="" /></li>
                     <li><img src={icon2} alt="" /></li>
                     <li><img src={icon3} alt="" /></li>
@@ -56,7 +56,7 @@ const card = () => (
                 </ul>
             </div>
         </div>
-        <div className={classes.rightBlock}>
+        <div className={classes.RightBlock}>
             <img src={barСode} alt="barcode" />
         </div>
     </div>

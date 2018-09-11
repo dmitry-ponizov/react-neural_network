@@ -1,4 +1,4 @@
-.card {
+.Card {
   display: flex;
   margin-left: 30px;
   width: 212px;
@@ -7,68 +7,68 @@
   border-top: 1px solid #00c1de;
   border-radius: 2px;
   padding: 7px 3px 7px 8px; }
-  .card .leftBlock {
+  .Card .LeftBlock {
     flex-direction: column;
     display: flex;
     align-items: center; }
-    .card .leftBlock .image {
+    .Card .LeftBlock .Image {
       width: 52px;
       height: 52px;
       border: 1px solid transparent;
       border-radius: 3px; }
-      .card .leftBlock .image img {
+      .Card .LeftBlock .Image img {
         height: 100%; }
-    .card .leftBlock .qr {
+    .Card .LeftBlock .Qr {
       height: 30px;
       width: 30px;
       margin-top: 17px; }
-      .card .leftBlock .qr img {
+      .Card .LeftBlock .Qr img {
         height: 100%; }
-  .card .centerBlock {
+  .Card .CenterBlock {
     margin-left: 10px; }
-    .card .centerBlock .cardLogo {
+    .Card .CenterBlock .CardLogo {
       display: flex;
       height: 28px; }
-      .card .centerBlock .cardLogo img {
+      .Card .CenterBlock .CardLogo img {
         height: 100%; }
-    .card .centerBlock .userData {
+    .Card .CenterBlock .UserData {
       margin-top: 10px;
       color: #838c92;
       font-family: Poppins-extra-light; }
-      .card .centerBlock .userData .fields {
+      .Card .CenterBlock .UserData .Fields {
         display: flex;
         margin-top: 2px; }
-      .card .centerBlock .userData ul {
+      .Card .CenterBlock .UserData ul {
         list-style-type: none; }
-        .card .centerBlock .userData ul li {
+        .Card .CenterBlock .UserData ul li {
           color: #838c92;
           font-size: 6px; }
-      .card .centerBlock .userData .fieldsValues {
+      .Card .CenterBlock .UserData .FieldsValues {
         margin-left: 5px; }
-        .card .centerBlock .userData .fieldsValues :last-child {
+        .Card .CenterBlock .UserData .FieldsValues :last-child {
           font-size: 5px; }
-      .card .centerBlock .userData .name {
+      .Card .CenterBlock .UserData .Name {
         font-family: Poppins-medium;
         font-size: 8px; }
-    .card .centerBlock .verified {
+    .Card .CenterBlock .Verified {
       margin-top: 9px;
       display: flex;
       flex-direction: column;
       align-items: start; }
-      .card .centerBlock .verified .title {
+      .Card .CenterBlock .Verified .Title {
         font-family: Poppins-medium;
         font-size: 6px;
         color: #838c92; }
-      .card .centerBlock .verified ul {
+      .Card .CenterBlock .Verified ul {
         display: flex;
         list-style-type: none; }
-        .card .centerBlock .verified ul li {
+        .Card .CenterBlock .Verified ul li {
           width: 13px;
           height: 13px; }
-          .card .centerBlock .verified ul li img {
+          .Card .CenterBlock .Verified ul li img {
             height: 100%; }
-  .card .rightBlock {
+  .Card .RightBlock {
     width: 4px;
     height: 100px; }
-    .card .rightBlock img {
+    .Card .RightBlock img {
       height: 100%; }

@@ -3,7 +3,7 @@ import logoImg from "../../../assets/images/logo.svg"
 import classes from './Logo.css';
 
 const logo = (props) => (
-   <div className={classes.logo}>
+   <div className={classes.Logo}>
      <img src={logoImg} alt="Logo" />
    </div>
 );

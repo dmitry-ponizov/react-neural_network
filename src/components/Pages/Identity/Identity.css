@@ -1,4 +1,4 @@
-.identityContainer {
+.IdentityContainer {
   width: 550px;
   border-radius: 6px;
   background-color: #ffffff;
@@ -7,11 +7,11 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 50px; }
-  .identityContainer .btnContainer {
+  .IdentityContainer .BtnContainer {
     margin-top: 88px;
     padding-bottom: 40px; }
 
-.attachmentList {
+.AttachmentList {
   width: 450px;
   padding: 15px 0;
   font-family: Poppins-regular;
@@ -22,11 +22,11 @@
   line-height: normal;
   letter-spacing: 0.2px;
   color: #1e242c; }
-  .attachmentList .attachments {
+  .AttachmentList .Attachments {
     display: flex;
     flex-wrap: wrap; }
 
-.uploadContainer {
+.UploadContainer {
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -36,17 +36,17 @@
   background-color: rgba(18, 182, 208, 0.03);
   border: dashed 1px #12b6d0;
   cursor: pointer; }
-  .uploadContainer:hover {
+  .UploadContainer:hover {
     border: solid 1px #12b6d0; }
-  .uploadContainer #upload {
+  .UploadContainer #Upload {
     display: none; }
-  .uploadContainer .uploadTitle {
+  .UploadContainer .UploadTitle {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 100%; }
-    .uploadContainer .uploadTitle span {
+    .UploadContainer .UploadTitle span {
       margin-top: 10px;
       width: 96px;
       height: 26px;

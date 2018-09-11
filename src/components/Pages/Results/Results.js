@@ -10,9 +10,9 @@ class UsersPage extends Component {
 
     render() {
         return (
-            <div className={classes.users}>
+            <div className={classes.Users}>
                 <Navigation serfPage={this.props.serf} />
-                <div className={classes.profiles}>
+                <div className={classes.Profiles}>
                     <Profile / >
                     <Profile / >
                     <Profile / >
@@ -20,9 +20,9 @@ class UsersPage extends Component {
                     <Profile / >
                     <Profile / >
                 </div>
-                <div className={classes.without}>
+                <div className={classes.Without}>
                     <Title name ="People without Moniic account" />
-                    <div className={classes.withoutUsers}>
+                    <div className={classes.WithoutUsers}>
                         <UserPhoto />
                         <UserPhoto />
                         <UserPhoto />
