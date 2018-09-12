@@ -23,7 +23,7 @@ const card = () => (
             </div>
         </div>
         <div className={classes.CenterBlock} >
-            <div className={classes.cardLogo} >
+            <div className={classes.CardLogo} >
                 <img src={logo}  alt="monic logotip" />
             </div>
             <div className={classes.UserData}>

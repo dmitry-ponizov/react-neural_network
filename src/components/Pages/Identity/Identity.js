@@ -6,18 +6,19 @@ import Title from '../../UI/Title/Title';
 import ReactDropzone from 'react-dropzone';
 import fileImage from "../../../assets/images/file.svg"
 import axios from 'axios';
+import Spinner from '../../UI/Spinner/Spinner'
 
-
-class IdentityPage extends Component {
+class Identity extends Component {
 
     state = {
         name: 'Identity verification',
         files: [],
+        loading: false,
+        page: ''
     }
 
 
-
-      closeAttachmentHandler = (name) => {
+    closeAttachmentHandler = (name) => {
        let files = [...this.state.files];
 
        let filtered = files.filter(file => {
@@ -32,88 +33,99 @@ class IdentityPage extends Component {
        })
        
           
-      }
-      serfPage = (page) => {
-          if(this.state.files.length){
-            this.props.serf(page)
-            this.fileUploadHandler()
-          } else {
+    }
+    serfPage = (page) => {
+        if(this.state.files.length){
+           this.filesUploadHandler()
+           this.setState({page:page})
+            
+        } else {
               return
-          }
-        
-      }
-        onPreviewDrop = (files) => {
-            this.setState({
-                files: this.state.files.concat(files),
-            });
         }
-          fileUploadHandler = () => {
-              let count = Object.keys(this.state.files).length;
+        
+    }
 
-              let fd = new FormData();
+    onPreviewDrop = (files) => {
+        this.setState({ files: this.state.files.concat(files) });
+    }
 
-              for (var i = 0; i < count; i++) {
-                  fd.append("files[]", this.state.files[i]);
-              }
+    filesUploadHandler = () => {
+        let count = Object.keys(this.state.files).length;
+
+        let fd = new FormData();
+
+        for (var i = 0; i < count; i++) {
+            fd.append("files[]", this.state.files[i]);
+        }
 
             //   for (var value of fd.values()) {
             //       console.log(value);
             //   }
-            
-            //   axios.post('http://hwl.api/test', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(res => {
-            //         console.log(res)
-            //   })
+        this.setState({loading:true})
 
-            let arr = [1,2,3,4,5,6,7];
+        axios.post('http://hwl.api/test', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(res => {
+            console.log(res)
+            this.getUsersDataHandler()
+        }).catch(error => {
+            console.log(error)
+        })
+
+        
+        }
+        getUsersDataHandler = () => {
+            let arr = ['adb4ca45-3db5-4194-bf82-6be971344d52','2d87c762-aff1-46ea-9be9-19ce8ca882aa','83a201ca-70fd-46fa-9133-82b29ea7f142'];
             let newArr = JSON.stringify(arr)
-                axios.post('http://hwl.api/test', newArr, {headers: { 'Content-Type': 'application/json' }}).then(res => {
+                axios.post('https://moniic.entenso.com/api/users-uuid', newArr, {headers: { 'Content-Type': 'application/json' }}).then(res => {
                     console.log(res)
-              })
-          }
-    render() {
+                    this.setState({loading:false})
+                    this.props.serf(this.state.page)
+                    // 
+                }).catch(error => {
+                    this.setState({loading:false})
+                })
+            }
 
-            let files = this.state.files.map((file, index) => {
-                return <Attachment 
-                name = {
-                    file.name
-                }
-                key = {
-                    index
-                }
-                size = {
-                    Math.round(file.size / 1000)
-                }
-                closeHandler = {
-                    this.closeAttachmentHandler
-                }
-                />
-            })
-          
+    render() {
+   
+        let files = this.state.files.map((file, index) => {
+            return <Attachment 
+                    name = { file.name }
+                    key = { index }
+                    size = { Math.round(file.size / 1000)}
+                    closeHandler = { this.closeAttachmentHandler }
+                    />
+        })
+        
         return (
+        
             <div className={classes.IdentityContainer}>
-                <Title name={this.state.name} />
-                <ReactDropzone
-                    accept = "image/jpeg,image/jpg"
-                    onDrop={this.onPreviewDrop}
-                    className={classes.UploadContainer}
-                    >   
-                       <div className={classes.UploadTitle}>
-                        <img src={fileImage} alt="file"  />
-                        <span>Drag photos here or click to upload</span>    
+            {!this.state.loading ?
+                <div>
+                    <Title name={this.state.name} />
+                    <ReactDropzone
+                        accept = "image/jpeg,image/jpg"
+                        onDrop={this.onPreviewDrop}
+                        className={classes.UploadContainer}
+                        >   
+                        <div className={classes.UploadTitle}>
+                            <img src={fileImage} alt="file"  />
+                            <span>Drag photos here or click to upload</span>    
+                        </div>
+                    </ReactDropzone>
+                    <div className={classes.AttachmentList}>
+                        <div>Attachments</div>
+                        <div className={classes.Attachments}>
+                        {files}
+                        </div>
                     </div>
-                </ReactDropzone>
-                 <div className={classes.AttachmentList}>
-                    <div>Attachments</div>
-                    <div className={classes.Attachments}>
-                       {files}
+                    <div className={classes.BtnContainer}>
+                        <Button serfPage={this.serfPage} active={this.state.files.length} />
                     </div>
-                 </div>
-                 <div className={classes.BtnContainer}>
-                    <Button serfPage={this.serfPage} active={this.state.files.length} />
-                 </div>
+                    </div>
+            : <Spinner />}
             </div>
         )
     }
 }
 
-export default IdentityPage;
+export default Identity;

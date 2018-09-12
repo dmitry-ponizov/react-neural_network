@@ -1,5 +1,6 @@
 .IdentityContainer {
   width: 550px;
+  min-height: 600px;
   border-radius: 6px;
   background-color: #ffffff;
   border: solid 1px #e5e5e5;
@@ -7,7 +8,10 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 50px; }
-  .IdentityContainer .BtnContainer {
+  .IdentityContainer div .BtnContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     margin-top: 88px;
     padding-bottom: 40px; }
 

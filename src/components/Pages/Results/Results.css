@@ -8,14 +8,3 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-  .Users .Without {
-    margin-top: 60px;
-    margin-bottom: 50px; }
-    .Users .Without .WithoutUsers {
-      justify-content: center;
-      display: flex;
-      margin-top: 45px; }
-      .Users .Without .WithoutUsers div {
-        margin-right: 40px; }
-        .Users .Without .WithoutUsers div:last-child {
-          margin-right: 0; }

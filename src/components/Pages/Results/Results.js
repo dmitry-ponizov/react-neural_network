@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import classes from './Results.css';
 import Navigation from './Navigation/Navigation'
 import Profile from './Profile/Profile'
-import Title from '../../UI/Title/Title'
-import UserPhoto from '../../UI/UserPhoto/UserPhoto'
+import WithOutUsers from './WithOutUsers/WithOutUsers'
 
-class UsersPage extends Component {
+class Results extends Component {
     
 
     render() {
@@ -20,19 +19,10 @@ class UsersPage extends Component {
                     <Profile / >
                     <Profile / >
                 </div>
-                <div className={classes.Without}>
-                    <Title name ="People without Moniic account" />
-                    <div className={classes.WithoutUsers}>
-                        <UserPhoto />
-                        <UserPhoto />
-                        <UserPhoto />
-                        <UserPhoto />
-                    </div>
-                </div>
-                
+                <WithOutUsers />
             </div>
         )
     }
 }
 
-export default UsersPage;
+export default Results;

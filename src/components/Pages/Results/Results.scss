@@ -10,20 +10,6 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .Without {  
-        margin-top: 60px;
-        margin-bottom: 50px;
-        .WithoutUsers{
-            justify-content: center;
-            display: flex;  
-            margin-top: 45px;
-            div {
-                margin-right: 40px;
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
- 
+   
+   
 }

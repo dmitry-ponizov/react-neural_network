@@ -1,0 +1,11 @@
+.Without {
+  margin-top: 60px;
+  margin-bottom: 50px; }
+  .Without .WithoutUsers {
+    justify-content: center;
+    display: flex;
+    margin-top: 45px; }
+    .Without .WithoutUsers div {
+      margin-right: 40px; }
+      .Without .WithoutUsers div:last-child {
+        margin-right: 0; }
