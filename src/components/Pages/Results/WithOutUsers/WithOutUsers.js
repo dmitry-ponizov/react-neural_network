@@ -13,14 +13,14 @@ class WithOutUsers extends Component {
 
     render () {
         let animate = 'wow bounceInUp';
+        let withOutUsers = this.props.notFound.map((item, index) => {
+                return  <UserPhoto key={index} photo={item.img} />
+        })
         return (
             <div className={classes.Without + ' ' + animate}>
                 <Title name ="People without Moniic account" />
                 <div className={classes.WithoutUsers}>
-                    <UserPhoto />
-                    <UserPhoto />
-                    <UserPhoto />
-                    <UserPhoto />
+                    {withOutUsers}
                 </div>
             </div>
         )

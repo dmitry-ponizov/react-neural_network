@@ -9,25 +9,45 @@ import Filter from './components/Pages/Filter/Filter'
 
 class App extends Component {
 
-  state = {
-    page: 'identity'
+    state = {
+      page: 'identity',
+      users: [],
+      found: [],
+      notFound: []
+    }
+  serfPageHandler = (pageName) => {
+    this.setState({
+      page: pageName
+    })
   }
- serfPageHandler = (pageName) => {
-   this.setState({
-    page: pageName
-   })
- }
+  usersHandler = (users, data) => {
+    this.setState({
+      users: users,
+      found: data.found,
+      notFound: data.not_found
+    })
+
+  }
   render() {
     let page = '';
     switch(this.state.page) {
       case 'results': 
-      page = <Results serf={this.serfPageHandler} />
+      page = <Results 
+        serf={this.serfPageHandler} 
+        users={this.state.users}
+        found={this.state.found}
+        notFound={this.state.notFound}
+        />
         break;
       case 'filter': 
         page = <Filter />
         break;
       default:
-        page = <Identity serf={this.serfPageHandler} />
+        page = <Identity 
+        serf={this.serfPageHandler} 
+        getUsers={this.usersHandler}
+        
+        />
         break;
     }
 

@@ -8,18 +8,16 @@ class Results extends Component {
     
 
     render() {
+        let profiles = this.props.users.map((user, index) => {
+           return <Profile user={user}  key = { index } found={this.props.found[index]} / >
+        })
         return (
             <div className={classes.Users}>
                 <Navigation serfPage={this.props.serf} />
                 <div className={classes.Profiles}>
-                    <Profile / >
-                    <Profile / >
-                    <Profile / >
-                    <Profile / >
-                    <Profile / >
-                    <Profile / >
+                    {profiles}
                 </div>
-                <WithOutUsers />
+                <WithOutUsers notFound={this.props.notFound} />
             </div>
         )
     }

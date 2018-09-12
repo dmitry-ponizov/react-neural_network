@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Card.css';
-import avatar from '../../../assets/images/man.jpg'
 import qrCode from '../../../assets/images/qrcode.png'
 import logo from '../../../assets/images/logo-card.svg'
 import barСode from '../../../assets/images/code.svg'
@@ -12,11 +11,11 @@ import icon5 from '../../../assets/images/icons/5.png'
 import icon6 from '../../../assets/images/icons/6.svg'
 import icon7 from '../../../assets/images/icons/7.svg'
 
-const card = () => (
+const card = (props) => (
     <div className={classes.Card} >
         <div className={classes.LeftBlock} >
             <div className={classes.Image}>
-                <img src={ avatar } alt="avatar" />
+                <img src={ props.userData.selfie } alt="avatar" />
             </div>
             <div className={classes.Qr}>
                 <img src={qrCode}  alt="code" />
@@ -27,7 +26,7 @@ const card = () => (
                 <img src={logo}  alt="monic logotip" />
             </div>
             <div className={classes.UserData}>
-                <div className={classes.Name} >John Doe</div>
+                <div className={classes.Name}> {props.userData.passport.firstName} {props.userData.passport.lastName}</div>
                 <div className={classes.Fields}>
                     <ul className={classes.UserFields}>
                         <li>Nationality:</li>
@@ -35,9 +34,9 @@ const card = () => (
                         <li>ID:</li>
                     </ul>
                     <ul className={classes.FieldsValues}>
-                        <li>USA</li>
-                        <li>2022-10-04</li>
-                        <li>28135456-3c11-4d6c-bebb-51ee22ce</li>
+                        <li>{props.userData.passport.nationality}</li>
+                        <li>{props.userData.passport.expireIn}</li>
+                        <li>{props.userData.uuid}</li>
                      </ul>
                 </div>
             </div>

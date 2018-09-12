@@ -55,7 +55,7 @@ class Identity extends Component {
         let fd = new FormData();
 
         for (var i = 0; i < count; i++) {
-            fd.append("files[]", this.state.files[i]);
+            fd.append("files", this.state.files[i]);
         }
 
             //   for (var value of fd.values()) {
@@ -63,22 +63,29 @@ class Identity extends Component {
             //   }
         this.setState({loading:true})
 
-        axios.post('http://hwl.api/test', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(res => {
-            console.log(res)
-            this.getUsersDataHandler()
+        axios.post('http://165.227.171.102:3000/api/v1/recognize', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(response => {
+ 
+            this.getUsersDataHandler(response.data)
+            // if(response.data.found){
+            //     
+            // }
         }).catch(error => {
             console.log(error)
         })
 
-        
         }
-        getUsersDataHandler = () => {
-            let arr = ['adb4ca45-3db5-4194-bf82-6be971344d52','2d87c762-aff1-46ea-9be9-19ce8ca882aa','83a201ca-70fd-46fa-9133-82b29ea7f142'];
-            let newArr = JSON.stringify(arr)
-                axios.post('https://moniic.entenso.com/api/users-uuid', newArr, {headers: { 'Content-Type': 'application/json' }}).then(res => {
-                    console.log(res)
+
+        getUsersDataHandler = (data) => {
+                let uuids = [];
+                for(let found in data.found){
+                    uuids.push(data.found[found].id)
+                }
+            
+                axios.post('https://moniic.entenso.com/api/users-uuid', uuids, {headers: { 'Content-Type': 'application/json' }}).then(response => {
+                console.log(response)
                     this.setState({loading:false})
                     this.props.serf(this.state.page)
+                    this.props.getUsers(response.data.users, data)
                     // 
                 }).catch(error => {
                     this.setState({loading:false})

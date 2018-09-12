@@ -6,7 +6,8 @@ const userPhoto = (props) => (
         <div className={classes.UserPhoto}>
             <div className={classes.ImageContainer} >
                 <div className={classes.Img}>
-                    <img src={people} alt="" />
+  
+                    <img src={props.photo ? props.photo : people} alt="" />
                 </div>
             </div>
             <span>1 match on 2 photos</span>

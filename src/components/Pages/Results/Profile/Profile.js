@@ -14,10 +14,11 @@ class Profile extends Component {
 
     render() {
       let animate = 'wow pulse';
+
       return(
         <div className={classes.Profile + ' ' + animate} >
-          <UserPhoto />
-          <Card />
+          <UserPhoto photo={this.props.found.img}/>
+          <Card userData={this.props.user} />
         </div>
       )
     }
