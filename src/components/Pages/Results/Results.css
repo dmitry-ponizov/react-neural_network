@@ -8,3 +8,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
+
+.NotResult {
+  text-align: center;
+  color: #d4d4d4;
+  margin-top: 50px; }

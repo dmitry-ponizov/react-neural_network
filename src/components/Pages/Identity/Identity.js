@@ -58,17 +58,11 @@ class Identity extends Component {
             fd.append("files", this.state.files[i]);
         }
 
-            //   for (var value of fd.values()) {
-            //       console.log(value);
-            //   }
         this.setState({loading:true})
 
         axios.post('http://165.227.171.102:3000/api/v1/recognize', fd, { headers: { 'Content-Type': 'multipart/form-data' } }).then(response => {
  
             this.getUsersDataHandler(response.data)
-            // if(response.data.found){
-            //     
-            // }
         }).catch(error => {
             console.log(error)
         })
@@ -82,11 +76,10 @@ class Identity extends Component {
                 }
             
                 axios.post('https://moniic.entenso.com/api/users-uuid', uuids, {headers: { 'Content-Type': 'application/json' }}).then(response => {
-                console.log(response)
                     this.setState({loading:false})
                     this.props.serf(this.state.page)
                     this.props.getUsers(response.data.users, data)
-                    // 
+                    
                 }).catch(error => {
                     this.setState({loading:false})
                 })
@@ -104,9 +97,10 @@ class Identity extends Component {
         })
         
         return (
-        
-            <div className={classes.IdentityContainer}>
+            <div>
             {!this.state.loading ?
+            <div className={classes.IdentityContainer}>
+           
                 <div>
                     <Title name={this.state.name} />
                     <ReactDropzone
@@ -129,6 +123,8 @@ class Identity extends Component {
                         <Button serfPage={this.serfPage} active={this.state.files.length} />
                     </div>
                     </div>
+            
+            </div>
             : <Spinner />}
             </div>
         )

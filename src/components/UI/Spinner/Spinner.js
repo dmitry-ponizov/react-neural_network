@@ -1,9 +1,12 @@
 import React from 'react'
 import classes from './Spinner.css'
-
+import scan from '../../../assets/images/scan.gif'
 
 const spinner = (props) => (
-    <div className={classes.Loader} >Loading...</div>
+    <div>
+        <img src={scan} alt="loading"/>
+    </div>
+    // <div className={classes.Loader} >Loading...</div>
 )
 
 

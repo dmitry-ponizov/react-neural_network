@@ -14,10 +14,14 @@ class Results extends Component {
         return (
             <div className={classes.Users}>
                 <Navigation serfPage={this.props.serf} />
+                {this.props.found.length ? 
                 <div className={classes.Profiles}>
                     {profiles}
                 </div>
+                : <h1 className={classes.NotResult}>Not results</h1>}
+                {this.props.notFound.length ? 
                 <WithOutUsers notFound={this.props.notFound} />
+                : ''}
             </div>
         )
     }
